@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+  height: 100vh;
+  background-color: gray;
+}
+
+.logo {
+  font-size: 2em;
+  font-family: var(--LOGO-FONT);
+  padding-top: 450px;
+}

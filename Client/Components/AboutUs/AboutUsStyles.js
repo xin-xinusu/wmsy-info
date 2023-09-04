@@ -1,0 +1,94 @@
+import styled from "@emotion/styled";
+import { COLORS, DeviceDimensions, extractField } from "../../utils";
+
+export const Introduction = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 7.5rem 1.875rem;
+  gap: 2.5rem;
+  background-color: ${COLORS.LILAC_GREY};
+  justify-content: flex-end;
+
+  @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) and (max-width: ${DeviceDimensions.MaxLaptopWidth}) {
+    padding: 10rem 3.125rem;
+  }
+  @media all and (min-width: ${DeviceDimensions.MinDesktopWidth}) {
+    padding: 10.125rem 6.25rem;
+  }
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1.5rem;
+  button {
+    width: 50%;
+    @media all and (max-width: ${DeviceDimensions.MaxTabletWidth}) {
+      width: 80%;
+    }
+  }
+`;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const Title = styled.div`
+  margin: auto;
+  margin-top: 8.125rem;
+  width: 70%;
+  text-align: center;
+`;
+
+export const Row = styled.div`
+  margin-top: 12.5rem;
+  margin-bottom: 6.25rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  @media all and (max-width: ${DeviceDimensions.MaxTabletWidth}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const TextDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: ${props => props.width}%;
+  gap: 2rem;
+  @media all and (max-width: ${DeviceDimensions.MaxTabletWidth}) {
+    flex-direction: column;
+    align-items: center;
+    width: calc(${props => props.width}% * 2);
+    text-align: center;
+  }
+`;
+
+export const EllipsesContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 6.5rem 6rem;
+  column-gap: 16rem;
+  row-gap: 8.2rem;
+  @media all and (max-width: ${DeviceDimensions.MaxDesktopWidth}) {
+    column-gap: 15%;
+  }
+  @media all and (max-width: ${DeviceDimensions.MinDesktopWidth}) {
+    column-gap: 6%;
+  }
+`;
+
+export const SvgContainer = styled.div`
+  width: ${props => props.width}rem;
+  @media all and (max-width: ${DeviceDimensions.MinTabletWidth}) {
+    width: calc(${props => props.width}rem * 0.6);
+  }
+`;

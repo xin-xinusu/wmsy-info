@@ -1,0 +1,8 @@
+<svg width="19" height="18" viewBox="0 0 19 18" fill="current" xmlns="http://www.w3.org/2000/svg">
+    <rect width="4" height="4" fill="current" />
+    <rect y="7" width="4" height="4" fill="current" />
+    <rect y="14" width="4" height="4" fill="current" />
+    <path d="M19 1H7V3H19V1Z" fill="current" />
+    <path d="M19 8H7V10H19V8Z" fill="current" />
+    <path d="M19 15H7V17H19V15Z" fill="current" />
+</svg>
