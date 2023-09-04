@@ -38,8 +38,8 @@ export default function Document() {
         <meta name="twitter:image" content="https://i.ibb.co/q7G1v0K/wmsy-meta.jpg"></meta>
         <meta name="twitter:site" content="@wmsy_estates"></meta>
 
-        // Schema Markup - used by Google to understand business and website content
-        // used dangerouslySetInnerHTML as JSON-LD scripts dont work in Javascript
+        {/* Schema Markup - used by Google to understand business and website content */}
+        {/* used dangerouslySetInnerHTML as JSON-LD scripts dont work in Javascript */}
         <script type="application/ld+json" 
           dangerouslySetInnerHTML={{ __html: `{
               "@context": "https://schema.org",
@@ -51,8 +51,8 @@ export default function Document() {
             }` }}
           />
 
-          // NOTE: these can be added into the Schema Markup but were left out due to WMSY's decentralised nature
-          // Uncomment and add the following lines if you would like to use them.
+          {/* NOTE: these can be added into the Schema Markup but were left out due to WMSY's decentralised nature */}
+          {/* Uncomment and add the following lines if you would like to use them. */}
           
             {/* "telephone": "YOUR_PHONE_NUMBER",
             "address": {
