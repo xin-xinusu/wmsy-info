@@ -19,7 +19,6 @@ export default function Document() {
         {/* Metadata */}
         {/* General */}
         <meta charSet="UTF-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="description" content="Invest in rental properties like stocks. Start with as little as $100 and earn passive income."></meta>
         <meta name="keywords" content="real estate, rental properties, passive income, fractional ownership, investment"></meta>
         <meta name="author" content="Whimsy"></meta>
