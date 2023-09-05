@@ -23,19 +23,19 @@ export const MenuNavbar = () => {
   return (
     <MenuNavbarContainer>
       <MenuNavbarItem onClick={()=>linkToPage(router, Pages.HOME)}>
-        <Home height={homeSvgSize} width={homeSvgSize} />
+        <Home height={homeSvgSize} width={homeSvgSize} fill={COLORS.DARK_PURPLE} />
         <Typography {...typographyProps}>
           <Link href={Pages.HOME}>Home</Link>
         </Typography>
       </MenuNavbarItem>
       <HorizontalLine />
       <MenuNavbarItem onClick={()=>linkToPage(router, Pages.ABOUT_US)}>
-        <About />
+        <About fill={COLORS.MID_PURPLE} />
         <Typography {...typographyProps}>About</Typography>
       </MenuNavbarItem>
       <HorizontalLine />
       <MenuNavbarItem onClick={()=>linkToPage(router, Pages.LEARN)}>
-        <FAQ />
+        <FAQ fill={COLORS.MID_PURPLE} />
         <Typography {...typographyProps}>
           Learn
         </Typography>

@@ -37,18 +37,17 @@ export const Navbar = ({ variant }) => {
       <Typography
         variant={textSize}
         color={textColor}
-        weight={isBold(router.pathname === Pages.LEARN)}
-      >
-        <Link href={Pages.LEARN}>Learn</Link>
-      </Typography>
-      <Typography
-        variant={textSize}
-        color={textColor}
         weight={isBold(router.pathname === Pages.ABOUT_US)}
       >
         <Link href={Pages.ABOUT_US}>About</Link>
       </Typography>
-      
+      <Typography
+        variant={textSize}
+        color={textColor}
+        weight={isBold(router.pathname === Pages.LEARN)}
+      >
+        <Link href={Pages.LEARN}>Learn</Link>
+      </Typography>
     </NavMenuContainer>
   );
 };

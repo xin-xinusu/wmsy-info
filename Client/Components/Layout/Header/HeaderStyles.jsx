@@ -63,9 +63,9 @@ export const LogoContainer = styled.div`
 
 export const NavMenuContainer = styled.nav`
   display: flex;
-  justify-content: center;
+
   gap: 15px;
-  margin: 0 30px;
+  margin: 0 100px;
 
   a {
     color: inherit;
