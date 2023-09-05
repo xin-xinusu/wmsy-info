@@ -101,6 +101,7 @@ export const WhyInvestSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
+  text-align: center;
   padding: 100px 50px 60px 50px;
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
     padding: 100px 100px 60px 100px;
@@ -169,6 +170,7 @@ export const HowItWorksSection = styled.div`
   align-items: center;
   background-color: ${COLORS.WHITE};
   margin: 300px 50px;
+  text-align: center;
 
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
     margin: 300px 100px;

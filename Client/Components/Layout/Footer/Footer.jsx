@@ -42,10 +42,8 @@ export const Footer = () => {
           >
             Platform
           </Typography>
-          <FooterLink label="How it works" href={Pages.COMING_SOON} />
-          <FooterLink label="Properties" href={Pages.MARKETPLACE} />
           <FooterLink label="About" href={Pages.ABOUT_US} />
-          <FooterLink label="FAQ" href={Pages.COMING_SOON} />
+          <FooterLink label="Learn" href={Pages.LEARN} />
         </LinksBox>
 
         <LinksBox>
