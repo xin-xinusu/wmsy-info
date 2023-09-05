@@ -90,22 +90,19 @@ export default function App({ Component, pageProps: {session, ...pageProps} }) {
   }, []);
 
   return (
-    <SessionProvider session={session}>
-      <ApolloProvider client={apolloClient}>
-        <WindowContext.Provider value={{ windowSize, setWindowSize }}>
-          <GlobalProvider>
-            <AppStateComponent>
-            <Fonts />
-              {
-                  loading ? (
-                    <Loading variant="fullHeight" />
-                  ) : (
-                    <Component {...pageProps} />
-                  )
-              }
-            </AppStateComponent>
-          </GlobalProvider>
-        </WindowContext.Provider> 
-      </ApolloProvider>
-    </SessionProvider>)
+    <WindowContext.Provider value={{ windowSize, setWindowSize }}>
+      <GlobalProvider>
+        <AppStateComponent>
+        <Fonts />
+          {
+              loading ? (
+                <Loading variant="fullHeight" />
+              ) : (
+                <Component {...pageProps} />
+              )
+          }
+        </AppStateComponent>
+      </GlobalProvider>
+    </WindowContext.Provider> 
+    )
 }
