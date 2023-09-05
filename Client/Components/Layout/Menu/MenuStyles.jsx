@@ -31,6 +31,7 @@ export const LogoMenuContainer = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
+  margin-bottom: 30px;
 
   svg {
     cursor: pointer;

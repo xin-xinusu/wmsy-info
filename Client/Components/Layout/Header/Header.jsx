@@ -23,7 +23,7 @@ export const Header = ({ variant }) => {
 
   return (
     <>
-      {/* {isOpenMenu && <Menu setIsMenuOpen={setIsOpenMenu} />} */}
+      {isOpenMenu && <Menu setIsMenuOpen={setIsOpenMenu} />}
       <HeaderContainer>
         <HamburgerMenu
           height={menuSize}
