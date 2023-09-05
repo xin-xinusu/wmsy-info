@@ -39,7 +39,6 @@ export const InvestWithoutCompromise = () => {
         setAlreadySubscribed(true)
         setResponseMessage(response.data.message)
       } catch (error) {
-        console.log("Subscription failed:", error);
         setLocalStorageItem('subscribed', false)
         setResponseMessage("Subscription failed, please try again later")
       }
@@ -49,7 +48,6 @@ export const InvestWithoutCompromise = () => {
   }
 
   const handleInput = (value) => {
-    console.log('value :>> ', value);
     if(responseMessage){
       setResponseMessage(null)
     }
