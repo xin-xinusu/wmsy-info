@@ -42,7 +42,7 @@ async function startDatabase(status) {
 startDatabase();
 
 // EXPORT DB schemas
-import Admin from "../models/admin";
+// import Admin from "../models/admin";
 import Currency from "../models/currency";
 import Property from "../models/property";
 import PropertyMint from "../models/property-mint";
@@ -58,10 +58,11 @@ import AmenityPropertyType from "../models/amenity-property-type";
 import AmenityProperty from "../models/amenity-property";
 import Media from "../models/media";
 import Order from "../models/order";
+import Subscriber from "../models/subscriber";
 import Wallet from "../models/wallet";
 
 const db = {
-  Admin,
+  // Admin,
   Currency,
   Property,
   PropertyMint,
@@ -77,6 +78,7 @@ const db = {
   AmenityProperty,
   Media,
   Order,
+  Subscriber,
   Wallet
 };
 

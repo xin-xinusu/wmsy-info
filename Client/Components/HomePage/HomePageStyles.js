@@ -317,3 +317,12 @@ export const EmailAddressInput = styled.div`
     flex-direction: row;
   }
 `;
+
+export const AlreadySubscribedHolder = styled.div`
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+`

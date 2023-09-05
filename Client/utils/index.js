@@ -2,6 +2,7 @@ export * from "./account";
 export * from "./authentication";
 export * from "./constants";
 export * from "./generics";
+export * from "./localStorage";
 export * from "./pages";
 export * from "./strings";
 export * from "./texts";

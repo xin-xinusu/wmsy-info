@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Cardano from "../../../assets/svg/Cardano.svg";
+import CardanoIcon from "../../../assets/svg/Cardano.svg";
 import Ellipse from "../../../assets/svg/Ellipse.svg";
 import House from "../../../assets/svg/House.svg";
 import { COLORS, Pages } from "../../utils";
@@ -81,7 +81,7 @@ export const AboutUs = () => {
         </EllipsesContainer>
         <Row>
           <SvgContainer width={25}>
-            <Cardano />
+            <CardanoIcon />
           </SvgContainer>
           <TextDescription width={50}>
             <Typography variant={TVariant.XL} weight={TWeight.BOLD}>

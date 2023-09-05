@@ -141,13 +141,13 @@ export const WhyInvestWithUs = () => {
         </LiabilityBox>
       </AdvantagesSection>
 
-      <MidButtonWrapper>
+      {/* <MidButtonWrapper>
         <Button color={COLORS.WHITE} fullWidth disabled>
           <Typography weight={TWeight.BOLD} variant={TVariant.L}>
             Start Earning
           </Typography>
         </Button>
-      </MidButtonWrapper>
+      </MidButtonWrapper> */}
     </WhyInvestSection>
   );
 };
