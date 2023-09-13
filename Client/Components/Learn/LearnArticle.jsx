@@ -44,37 +44,32 @@ const LearnArticle = ({article, category}) => {
   // }
 
   return (
-    <>
-      <LearnHeader />
-      <CategoryLearn>
-        {/* breadcrumbs */}
-        <div className="row">
-          <div 
-            onClick={()=>linkToLearnPage(router )}
-          >
-            {upperCaseFirst(router.asPath.split('/').filter(item => item !== '')[0])} &gt;
-          </div>
-          <div 
-            onClick={()=>linkToLearnPage(router, `/${categoryUrl}`)}
-          >
-            {category.title} &gt;
-          </div>
-          <div style={{ color: COLORS.PRIMARY_GRAY }}>{article.title}</div>
+    <CategoryLearn>
+      {/* breadcrumbs */}
+      <div className="row">
+        <div 
+          onClick={()=>linkToLearnPage(router )}
+        >
+          {upperCaseFirst(router.asPath.split('/').filter(item => item !== '')[0])} &gt;
         </div>
+        <div 
+          onClick={()=>linkToLearnPage(router, `/${categoryUrl}`)}
+        >
+          {category.title} &gt;
+        </div>
+        <div style={{ color: COLORS.PRIMARY_GRAY }}>{article.title}</div>
+      </div>
 
-        <h1>
-          {article.title}
-        </h1>
+      <h1>
+        {article.title}
+      </h1>
 
-        <ReactMarkdown
-          children={article.markdown} 
-          rehypePlugins={[rehypeRaw]}
-          skipHtml={false}
-        />
-      </CategoryLearn>
-
-      
-    </>
+      <ReactMarkdown
+        children={article.markdown} 
+        rehypePlugins={[rehypeRaw]}
+        skipHtml={false}
+      />
+    </CategoryLearn>
   );
 };
 

@@ -7,5 +7,6 @@ export * from './navigation'
 export * from "./pages";
 export * from "./strings";
 export * from "./texts";
+export * from './time';
 export * from "./tokens";
 export * from "./window";

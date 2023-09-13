@@ -17,3 +17,13 @@
   height: 100vh;
   overflow: hidden;
 }
+
+.page-transition-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.page-transition-wrapper-exit,
+.page-transition-wrapper-enter {
+  opacity: 0;
+}

@@ -1,22 +1,26 @@
 import React, { useContext, useState } from 'react'
-
+import Image from 'next/image'
 import LearnContext from '../../contexts/learn.context'
 
 import { TVariant, TWeight, Typography } from "../Typography";
 import { LearnCard } from "./LearnCard";
 import { 
   CategoryLearn,
+  DotSpacer,
   LearnSections,
-  LearnCategoryArticleDisplay
+  LearnCategoryArticleTitle,
+  LearnCategoryArticleDisplay,
+  LearnCoverBanner,
+  LearnCategoryTitle,
+  LearnSubTitle
 } from "./LearnStyles";
-import { LearnHeader } from "./LearnHeader";
 
 import RightArrow from '../../../assets/svg/RightArrow.svg'
 
-import { COLORS, Pages } from "../../utils";
+import { COLORS, Pages, WMSY_COVER_BANNER } from "../../utils";
 import { useRouter } from "next/router";
 
-import { replaceDashWithSpace, replaceSpaceWithDash, stripCharactersAndDash, linkToLearnPage } from './learn-utils';
+import { linkToLearnPage } from './learn-utils';
 
 
 export const LearnCategory = ({category}) => {
@@ -26,18 +30,42 @@ export const LearnCategory = ({category}) => {
 
   return (
     <>
-      <LearnHeader />
       <CategoryLearn>
-        
+        <LearnCoverBanner backgroundImage={category.categoryImg ? category.categoryImg  : WMSY_COVER_BANNER} />
         {/* Category Module */}
-        {category.icon}
-        <h1>{category.title}</h1>
-        <p>{category.subTitle}</p>
-        <span>{category.articles.length === 1 ? `${category.articles.length} article` : `${category.articles.length} articles` }</span>
+        <LearnCategoryTitle>
+          {category.icon}
+          <Typography
+            variant={TVariant.L}
+            weight={TWeight.BOLD}
+          >
+            {category.title}
+          </Typography>
+        </LearnCategoryTitle>
+        <LearnSubTitle>
+          <Typography
+            variant={TVariant.M}
+          >
+            {category.subTitle}
+          </Typography>
+          <DotSpacer>•</DotSpacer>
+          <Typography
+            variant={TVariant.B}
+          >
+            {category.articles.length === 1 ? `${category.articles.length} Article` : `${category.articles.length} Articles` }
+          </Typography>
+        </LearnSubTitle>
 
         {/* Category Module */}
         <LearnCategoryArticleDisplay>
-          <h3>{category.articleBoxTitle}</h3>
+          <LearnCategoryArticleTitle>
+            <Typography
+              variant={TVariant.L}
+              weight={TWeight.BOLD}
+            >
+              {category.articleBoxTitle}
+            </Typography>
+          </LearnCategoryArticleTitle>
           {
             category.articles.length > 0 
               ? category.articles.map((article, i) => 

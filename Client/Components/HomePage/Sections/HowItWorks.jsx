@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import WmsyHomeCard from '../../../../assets/banner-elements/wmsy-home-card.png'
 import Step2 from '../../../../assets/svg/HomePage/HowItWorks/step2.svg';
 import Step3 from '../../../../assets/svg/HomePage/HowItWorks/step3.svg';
 import WindowContext from '../../../contexts/window.context';
@@ -49,7 +50,7 @@ export const HowItWorks = () => {
           </Typography>
         </TextStep>
         <Step1ImageContainer>
-          <Image src={STEP1_IMAGE_PATH} alt="Step 1" fill />
+          <Image src={WmsyHomeCard} alt="Step 1" fill />
         </Step1ImageContainer>
       </Step>
 

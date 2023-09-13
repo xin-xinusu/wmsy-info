@@ -5,7 +5,7 @@ export const setLocalStorageItem = (key, content) => localStorage.setItem(key, c
 export const fetchLocalStorageItem = (key) => localStorage.getItem(key);
 
 // remove localstorage item 
-export const removeLocalStorageItem = (key, content) => localStorage.setItem(key, content);
+export const removeLocalStorageItem = (key) => localStorage.setItem(key);
 
 // Clear entire localstorage
-export const clearLocalStorage = (key, content) => localStorage.setItem(key, content);
+export const clearLocalStorage = () => localStorage.setItem();

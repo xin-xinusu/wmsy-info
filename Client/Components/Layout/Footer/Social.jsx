@@ -9,6 +9,9 @@ import { SocialContainer } from "./FooterStyles.js";
 export const Social = () => {
   return (
     <SocialContainer>
+      <Link href={Pages.COMING_SOON} target="_blank">
+        <LinkedIn />
+      </Link>
       <Link href={TWITTER_URL} target="_blank">
         <Twitter />
       </Link>

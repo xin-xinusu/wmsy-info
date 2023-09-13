@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import { COLORS, HOME_PAGE_IMAGE_PATH } from "../../utils/constants";
+import { COLORS, HOME_PAGE_IMAGE_PATH, CURIOUS_IMAGE_PATH } from "../../utils/constants";
 import { DeviceDimensions } from "../../utils/window";
 
 export const HomePageImageWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   position: absolute;
   z-index: -1;
   background-image: url(${HOME_PAGE_IMAGE_PATH});
@@ -12,7 +12,6 @@ export const HomePageImageWrapper = styled.div`
   pointer-events: none;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 `;
 
 export const Cover = styled.div`
@@ -20,19 +19,20 @@ export const Cover = styled.div`
   width: 100%;
   background-color: ${COLORS.BLACK_40};
   justify-content: center;
-  height: 100vh;
+  height: 75vh;
 `;
 
 export const CoverText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: left;
   padding-left: 40px;
   padding-right: 50px;
 
   @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) {
     padding-left: 110px;
-    padding-right: 500px;
+    padding-right: 650px;
   }
 `;
 
@@ -56,17 +56,17 @@ export const StrapLineSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 100px 75px;
+  padding: 80px 75px;
 
   @media all and (min-width: ${DeviceDimensions.MaxMobileWidth}) {
-    padding: 128px 110px 100px 110px;
+    padding: 118px 110px 100px 110px;
   }
   @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   @media all and (min-width: ${DeviceDimensions.MinDesktopWidth}) {
-    padding: 180px 110px 150px 110px;
+    padding: 150px 110px 150px 110px;
   }
 `;
 
@@ -101,7 +101,6 @@ export const WhyInvestSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  text-align: center;
   padding: 100px 50px 60px 50px;
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
     padding: 100px 100px 60px 100px;
@@ -170,13 +169,12 @@ export const HowItWorksSection = styled.div`
   align-items: center;
   background-color: ${COLORS.WHITE};
   margin: 300px 50px;
-  text-align: center;
 
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
     margin: 300px 100px;
   }
   @media all and (min-width: ${DeviceDimensions.MinDesktopWidth}) {
-    margin: 300px 200px;
+    margin: 300px 150px;
   }
 
   a {
@@ -187,7 +185,7 @@ export const HowItWorksSection = styled.div`
 
 export const Step = styled.div`
   display: flex;
-  gap: 62px;
+  gap: 50px;
   margin-top: 100px;
   margin-bottom: 100px;
   align-items: center;
@@ -224,7 +222,8 @@ export const StepNumber2 = styled(StepNumber)`
 export const TextStep = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  width: 40%;
 `;
 
 export const StepImageContainer = styled.div`
@@ -234,21 +233,18 @@ export const StepImageContainer = styled.div`
 
 // This won't be necessary when we have the svg
 export const Step1ImageContainer = styled.div`
-  width: 208px;
-  height: 170px;
+  width: 400px;
 
   img {
-    object-fit: contain;
+    object-fit: fill;
     position: unset !important;
   }
 
   @media all and (min-width: 340px) {
-    width: 311px;
-    height: 255px;
+    width: 421px;
   }
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
     width: 519px;
-    height: 426px;
   }
 `;
 
@@ -257,6 +253,12 @@ export const StillCuriousSection = styled.div`
   background-color: ${COLORS.DARK_PURPLE};
   display: flex;
   flex-direction: column;
+  
+  background-image: url(${CURIOUS_IMAGE_PATH});
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
   gap: 30px;
   text-align: center;
   padding: 108px 60px 82px 60px;
@@ -319,12 +321,3 @@ export const EmailAddressInput = styled.div`
     flex-direction: row;
   }
 `;
-
-export const AlreadySubscribedHolder = styled.div`
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-`

@@ -23,7 +23,10 @@ export const COLORS = {
   CANCELLED: "rgba(255, 64, 49, 0.65)",
 };
 
+export const WMSY_COVER_BANNER = "/whimsy-cover.png";
 export const HOME_PAGE_IMAGE_PATH = "/HomePageImage.png";
+export const ABOUT_US_IMAGE_PATH = "/about-us-banner.png";
+export const CURIOUS_IMAGE_PATH = "/curious-banner.png";
 
 export const STEP1_IMAGE_PATH = "/Step1.png";
 

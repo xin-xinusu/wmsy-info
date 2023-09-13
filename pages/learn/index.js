@@ -5,7 +5,10 @@ import { Learn } from "../../Client/Components/Learn/Learn";
 
 const LearnPage = () => {
   return (
-    <Layout title={TitlePages.LEARN} variant={HeaderVariant.DARK}>
+    <Layout 
+      title={TitlePages.LEARN} 
+      variant={HeaderVariant.LIGHT}
+    >
       <Learn />
     </Layout>
   );

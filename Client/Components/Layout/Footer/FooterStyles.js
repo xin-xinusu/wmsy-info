@@ -4,7 +4,6 @@ import { DeviceDimensions } from "../../../utils/window";
 
 export const FooterContainer = styled.footer`
   display: grid;
-
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
@@ -19,7 +18,7 @@ export const FooterContainer = styled.footer`
 
   background-color: ${COLORS.DARK_PURPLE};
 
-  padding: 30px 60px;
+  padding: 30px 20px 15px 20px;
 
   @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) {
     grid-template-rows: 1fr 1fr;
@@ -27,7 +26,7 @@ export const FooterContainer = styled.footer`
       "WMSY Links"
       "Social Links";
 
-    padding: 50px 100px;
+    padding: 50px 95px 20px 95px;
   }
 `;
 
@@ -91,3 +90,16 @@ export const SocialContainer = styled.div`
     cursor: pointer;
   }
 `;
+
+export const FooterDisclaimer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${COLORS.DARK_PURPLE};
+  padding: 30px 40px;
+  text-align: center;
+
+  @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) {
+    text-align: left;
+    padding: 30px 95px;
+  }
+`

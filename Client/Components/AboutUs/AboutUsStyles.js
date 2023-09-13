@@ -1,14 +1,20 @@
 import styled from "@emotion/styled";
-import { COLORS, DeviceDimensions, extractField } from "../../utils";
+import { COLORS, DeviceDimensions, extractField, ABOUT_US_IMAGE_PATH } from "../../utils";
 
 export const Introduction = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 70vh;
   padding: 7.5rem 1.875rem;
   gap: 2.5rem;
-  background-color: ${COLORS.LILAC_GREY};
+  background-color: ${COLORS.DARK_PURPLE};
   justify-content: flex-end;
+  align-items: center;
+
+  background-image: url(${ABOUT_US_IMAGE_PATH});
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 
   @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) and (max-width: ${DeviceDimensions.MaxLaptopWidth}) {
     padding: 10rem 3.125rem;
@@ -21,7 +27,9 @@ export const Introduction = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
   gap: 1.5rem;
   button {
     width: 50%;
@@ -92,3 +100,17 @@ export const SvgContainer = styled.div`
     width: calc(${props => props.width}rem * 0.6);
   }
 `;
+
+export const UnorderedBulletlist = styled.ul`
+  padding: 30px 20%;
+  align-self: center;
+`
+
+export const BulletLine = styled.li`
+  padding:10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+`

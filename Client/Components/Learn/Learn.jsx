@@ -10,6 +10,8 @@ import { LearnHeader } from "./LearnHeader";
 import { COLORS, Pages } from "../../utils";
 import { useRouter } from "next/router";
 
+import HomeHeaderImage from '../../../assets/banner-elements/mask-group.png'
+
 export const Learn = () => {
 
   const { learnModules } = useContext(LearnContext)
@@ -20,6 +22,7 @@ export const Learn = () => {
   return (
     <>
       <LearnHeader
+        BgImage={HomeHeaderImage}
         title="Everything you need to succeed with WMSY"
       />
       <LearnSections>

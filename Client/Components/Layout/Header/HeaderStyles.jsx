@@ -5,6 +5,7 @@ import Image from "next/image";
 import { COLORS } from "../../../utils/constants";
 
 export const HeaderContainer = styled.header`
+  z-index: 100;
   box-sizing: border-box;
   position: absolute;
   width: 100%;

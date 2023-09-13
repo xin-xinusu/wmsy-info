@@ -5,7 +5,7 @@ import { AboutUs } from "../Client/Components/AboutUs/AboutUs";
 
 const AboutUsPage = () => {
   return (
-    <Layout title={TitlePages.ABOUT_US} variant={HeaderVariant.DARK}>
+    <Layout title={TitlePages.ABOUT_US} variant={HeaderVariant.LIGHT}>
       <AboutUs />
     </Layout>
   );

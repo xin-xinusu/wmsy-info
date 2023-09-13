@@ -32,7 +32,10 @@ export const StrapLine = () => {
       >
         {HOME_PAGE_TEXT.strapLineTitle}
       </Typography>
-      <Typography variant={getFont('text')} color={COLORS.WHITE}>
+      <Typography 
+        variant={TVariant.XM}
+        color={COLORS.WHITE}
+      >
         {HOME_PAGE_TEXT.strapLineText}
       </Typography>
     </StrapLineSection>
