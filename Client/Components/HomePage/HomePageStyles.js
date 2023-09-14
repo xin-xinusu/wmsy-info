@@ -115,7 +115,7 @@ export const AdvantagesSection = styled.div`
     "FractionalOwnership" "EconomicRights"
     "Alignment" "Liability";
   text-align: center;
-  padding: 0px 60px;
+  padding: 0px 30px;
   gap: 20px 50px;
   margin-bottom: 70px;
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) and (max-width: ${DeviceDimensions.MaxTabletWidth}) {

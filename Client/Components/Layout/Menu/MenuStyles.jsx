@@ -23,6 +23,7 @@ export const MenuContainer = styled.div`
   @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) {
     display: none;
   }
+  z-index: 1000;
 `;
 
 export const LogoMenuContainer = styled.div`
