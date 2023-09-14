@@ -5,7 +5,7 @@ export const Introduction = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 8rem 1.875rem;
   gap: 2.5rem;
   background-color: ${COLORS.DARK_PURPLE};

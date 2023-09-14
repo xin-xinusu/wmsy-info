@@ -137,6 +137,11 @@ export const LearnSubTitle = styled.div`
     line-height: 30px;
     opacity: 0.6;
   }
+
+  @media all and (max-width: ${DeviceDimensions.MinTabletWidth}) {
+    flex-direction: column;
+    
+  }
 `
 
 export const LearnCoverBanner = styled.div`

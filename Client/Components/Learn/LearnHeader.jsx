@@ -62,6 +62,7 @@ export const LearnHeader = ({ BgImage, title }) => {
     >
       <Image 
           src={BgImage} 
+          alt="WMSY Header"
           style={{
             width: '95%',
             position: "absolute",
