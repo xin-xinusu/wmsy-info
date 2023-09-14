@@ -29,6 +29,10 @@ export const StyledButton = styled.button`
     cursor: not-allowed;
     color: ${COLORS.DISABLED};
   }
+  :hover {
+    background-color: ${COLORS.BUTTON_LIGHT};
+    opacity: 0.75;
+  },
   div {
     cursor: ${getCursor};
   }

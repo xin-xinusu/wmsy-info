@@ -27,6 +27,7 @@ export const CoverText = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  padding-top: 50px;
   padding-left: 40px;
   padding-right: 50px;
 
@@ -168,13 +169,15 @@ export const HowItWorksSection = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${COLORS.WHITE};
-  margin: 300px 50px;
+  margin: 220px 50px;
+  text-align: center;
+
 
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
-    margin: 300px 100px;
+    margin: 250px 100px;
   }
   @media all and (min-width: ${DeviceDimensions.MinDesktopWidth}) {
-    margin: 300px 150px;
+    margin: 250px 150px;
   }
 
   a {
@@ -224,6 +227,10 @@ export const TextStep = styled.div`
   flex-direction: column;
   gap: 15px;
   width: 40%;
+
+  @media all and (min-width: 340px) {
+    width: 80%;
+  }
 `;
 
 export const StepImageContainer = styled.div`
@@ -233,7 +240,7 @@ export const StepImageContainer = styled.div`
 
 // This won't be necessary when we have the svg
 export const Step1ImageContainer = styled.div`
-  width: 400px;
+  width: 40%;
 
   img {
     object-fit: fill;
@@ -241,7 +248,7 @@ export const Step1ImageContainer = styled.div`
   }
 
   @media all and (min-width: 340px) {
-    width: 421px;
+    width: 320px;
   }
   @media all and (min-width: ${DeviceDimensions.MinTabletWidth}) {
     width: 519px;

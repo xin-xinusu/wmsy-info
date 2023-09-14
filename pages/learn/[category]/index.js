@@ -3,15 +3,16 @@ import { useRouter } from 'next/router';
 
 import { HeaderVariant } from "../../../Client/Components/Layout";
 import { TitlePages } from "../../../Client/utils";
-
 import { Layout } from "../../../Client/Components/Layout/Layout";
 import LearnContext from '../../../Client/contexts/learn.context'
-
 import { LearnCategory } from "../../../Client/Components/Learn/LearnCategory";
+
+import { Loading } from '../../../Client/Components/Loading/Loading'
+
 
 const index = () => {
   const router = useRouter();
-  const [category, setCategory] = useState(null)
+  const [ category, setCategory ] = useState(null)
   const { learnModules } = useContext(LearnContext)
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const index = () => {
       {
         category 
           ? <LearnCategory category={category} />
-          : 'No matching article category'
+          : <Loading variant="fullHeight" />
       }
     </Layout>
   )

@@ -4,8 +4,9 @@ import { COLORS, DeviceDimensions, extractField, ABOUT_US_IMAGE_PATH } from "../
 export const Introduction = styled.div`
   display: flex;
   flex-direction: column;
-  height: 70vh;
-  padding: 7.5rem 1.875rem;
+  height: 100%;
+  width: 100%;
+  padding: 8rem 1.875rem;
   gap: 2.5rem;
   background-color: ${COLORS.DARK_PURPLE};
   justify-content: flex-end;
@@ -17,27 +18,27 @@ export const Introduction = styled.div`
   background-repeat: no-repeat;
 
   @media all and (min-width: ${DeviceDimensions.MinLaptopWidth}) and (max-width: ${DeviceDimensions.MaxLaptopWidth}) {
+    min-height: 50vh;
     padding: 10rem 3.125rem;
   }
   @media all and (min-width: ${DeviceDimensions.MinDesktopWidth}) {
+    min-height: 50vh;
     padding: 10.125rem 6.25rem;
   }
 `;
 
-export const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  gap: 1.5rem;
-  button {
-    width: 50%;
-    @media all and (max-width: ${DeviceDimensions.MaxTabletWidth}) {
-      width: 80%;
-    }
-  }
-`;
+// export const TextContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   width: 70%;
+//   gap: 1.5rem;
+//   button {
+//     width: 50%;
+//     @media all and (max-width: ${DeviceDimensions.MaxTabletWidth}) {
+//       width: 80%;
+//     }
+//   }
+// `;
 
 export const Description = styled.div`
   display: flex;
@@ -96,13 +97,14 @@ export const EllipsesContainer = styled.div`
 
 export const SvgContainer = styled.div`
   width: ${props => props.width}rem;
+  max-width: 300px;
   @media all and (max-width: ${DeviceDimensions.MinTabletWidth}) {
     width: calc(${props => props.width}rem * 0.6);
   }
 `;
 
 export const UnorderedBulletlist = styled.ul`
-  padding: 30px 20%;
+  padding: 30px 10%;
   align-self: center;
 `
 

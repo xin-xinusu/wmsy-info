@@ -29,43 +29,43 @@ export const LearnCategory = ({category}) => {
   const goToComingSoon = () => router.push(Pages.COMING_SOON);
 
   return (
-    <>
-      <CategoryLearn>
-        <LearnCoverBanner backgroundImage={category.categoryImg ? category.categoryImg  : WMSY_COVER_BANNER} />
-        {/* Category Module */}
-        <LearnCategoryTitle>
-          {category.icon}
+    <CategoryLearn>
+      <LearnCoverBanner backgroundImage={category.categoryImg ? category.categoryImg  : WMSY_COVER_BANNER} />
+      {/* Category Module */}
+      <LearnCategoryTitle>
+        {category.icon}
+        <Typography
+          variant={TVariant.L}
+          weight={TWeight.BOLD}
+        >
+          {category.title}
+        </Typography>
+      </LearnCategoryTitle>
+      <LearnSubTitle>
+        <Typography
+          variant={TVariant.M}
+        >
+          {category.subTitle}
+        </Typography>
+        <DotSpacer>•</DotSpacer>
+        <Typography
+          variant={TVariant.B}
+        >
+          {category.articles.length === 1 ? `${category.articles.length} Article` : `${category.articles.length} Articles` }
+        </Typography>
+      </LearnSubTitle>
+
+      {/* Category Module */}
+      <LearnCategoryArticleDisplay>
+        <LearnCategoryArticleTitle>
           <Typography
             variant={TVariant.L}
             weight={TWeight.BOLD}
           >
-            {category.title}
+            {category.articleBoxTitle}
           </Typography>
-        </LearnCategoryTitle>
-        <LearnSubTitle>
-          <Typography
-            variant={TVariant.M}
-          >
-            {category.subTitle}
-          </Typography>
-          <DotSpacer>•</DotSpacer>
-          <Typography
-            variant={TVariant.B}
-          >
-            {category.articles.length === 1 ? `${category.articles.length} Article` : `${category.articles.length} Articles` }
-          </Typography>
-        </LearnSubTitle>
-
-        {/* Category Module */}
-        <LearnCategoryArticleDisplay>
-          <LearnCategoryArticleTitle>
-            <Typography
-              variant={TVariant.L}
-              weight={TWeight.BOLD}
-            >
-              {category.articleBoxTitle}
-            </Typography>
-          </LearnCategoryArticleTitle>
+        </LearnCategoryArticleTitle>
+        <Typography variant={TVariant.M}>
           {
             category.articles.length > 0 
               ? category.articles.map((article, i) => 
@@ -79,8 +79,8 @@ export const LearnCategory = ({category}) => {
               )
               : <span>The author has not uploaded any articles for this category yet</span>
           }
-        </LearnCategoryArticleDisplay>
-      </CategoryLearn>
-    </>
+        </Typography>
+      </LearnCategoryArticleDisplay>
+    </CategoryLearn>
   );
 };

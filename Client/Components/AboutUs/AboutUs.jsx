@@ -50,50 +50,41 @@ export const AboutUs = () => {
   return (
     <>
       <Introduction>
-        <TextContainer>
-          <Typography 
-            variant={TVariant.L} 
+        <Typography 
+          variant={TVariant.L} 
+          color={COLORS.WHITE}
+          weight={TWeight.BOLD}
+        >
+          There is a better way to invest in real estate with WMSY
+          <UnorderedBulletlist>
+            <BulletLine>
+              <TickBullet />
+              Easy for first time investors
+            </BulletLine>
+            <BulletLine>
+              <TickBullet />
+              Earn passive income without the work
+            </BulletLine>
+            <BulletLine>
+              <TickBullet />
+              Become a co-owner of multiple properties
+            </BulletLine>
+          </UnorderedBulletlist>
+        </Typography>
+        <Button 
+          size={ButtonSizes.L} 
+          color={COLORS.MID_PURPLE} 
+          fullWidth
+        >
+          <Typography
+            variant={TVariant.M}
             color={COLORS.WHITE}
             weight={TWeight.BOLD}
+            onClick={goToMarketPlace}
           >
-            <div style={{
-              width: "100%",
-              fontSize: "2.35rem",
-              textAlign: 'center',
-            }}>
-              There is a better way to invest in real estate with WMSY
-            </div>
-            
-            <UnorderedBulletlist>
-              <BulletLine>
-                <TickBullet />
-                Easy for first time investors
-              </BulletLine>
-              <BulletLine>
-                <TickBullet />
-                Earn passive income without the work
-              </BulletLine>
-              <BulletLine>
-                <TickBullet />
-                Become a co-owner of multiple properties
-              </BulletLine>
-            </UnorderedBulletlist>
+            View Properties
           </Typography>
-          <Button 
-            size={ButtonSizes.L} 
-            color={COLORS.MID_PURPLE} 
-            fullWidth
-          >
-            <Typography
-              variant={TVariant.M}
-              color={COLORS.WHITE}
-              weight={TWeight.BOLD}
-              onClick={goToMarketPlace}
-            >
-              View Properties
-            </Typography>
-          </Button>
-        </TextContainer>
+        </Button>
       </Introduction>
       <Description>
         <Title>
@@ -101,6 +92,7 @@ export const AboutUs = () => {
             To make it as easy easy as possible for anyone in the world to diversity into real estate investing.
           </Typography>
         </Title>
+        
         <Row>
           <SvgContainer width={25}>
             <Cardano />
@@ -118,3 +110,32 @@ export const AboutUs = () => {
     </>
   );
 };
+
+
+{/* <Row>
+          <SvgContainer width={30}>
+            <House />
+          </SvgContainer>
+          <TextDescription width={40}>
+            <Typography variant={TVariant.L}>
+              Whether you are a beginner or a seasoned pro you can partake in
+              memberships at any size. From single families to a 100+ unit
+              properties. All with a click of the finger and a touch of whimsy.
+              It's that easy.
+            </Typography>
+          </TextDescription>
+        </Row>
+        <Title>
+          <Typography variant={TVariant.L} weight={TWeight.BOLD}>
+            Our team brings experience in real estate, data, technology,
+            operations, and finance
+          </Typography>
+        </Title>
+        <EllipsesContainer>
+          {ellipses.map((id) => (
+            // TODO: Replace Ellipse with corresponding svg
+            <SvgContainer width={15} key={id}>
+              <Ellipse />
+            </SvgContainer>
+          ))}
+        </EllipsesContainer> */}

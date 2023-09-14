@@ -8,6 +8,7 @@ import { Layout } from "../../../Client/Components/Layout/Layout";
 import LearnContext from '../../../Client/contexts/learn.context'
 
 import LearnArticle from "../../../Client/Components/Learn/LearnArticle";
+import { Loading } from '../../../Client/Components/Loading/Loading'
 
 const ArticlePage = () => {
   const router = useRouter();
@@ -39,14 +40,17 @@ const ArticlePage = () => {
   }, [category]);
 
   return (
-    <Layout>
+    <Layout
+      title={`${TitlePages.LEARN.split(' ')[0]} ${category && category.title ? `| ${category.title}` : '' }`} 
+      variant={HeaderVariant.DARK}
+    >
       {
         article 
           ? <LearnArticle 
             article={article}
             category={category}  
           />
-          : 'That article cannot be found'
+          : <Loading variant="fullHeight" />
       }
     </Layout>
   )

@@ -94,12 +94,10 @@ export const CategoryLearn = styled.div`
   flex-direction: column;
   align-self: center;
   gap: 40px;
-  width: 100%;
-  padding: 30px 4%;
+  width: 90%;
   padding-top: 120px;
   @media all and (max-width: ${DeviceDimensions.MinTabletWidth}) {
     text-align: initial;
-    padding: 0px 20px;
     padding-top: 100px;
   }
 `

@@ -2,27 +2,21 @@ import React, { useContext, useState } from 'react'
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
-
 import { TVariant, TWeight, Typography } from "../Typography";
 import { 
   CategoryLearn,
+  LearnCoverBanner,
 } from "./LearnStyles";
 import { LearnHeader } from "./LearnHeader";
 
-import { COLORS, Pages, upperCaseFirst } from "../../utils";
-import { useRouter } from "next/router";
+import { BreadCrumbs } from './BreadCrumbs';
+import { ScrollToTop } from '../ScrollToTop/ScrollToTop';
 
-import { replaceSpaceWithDash, stripCharactersAndDash, linkToLearnPage } from './learn-utils';
-
+import { COLORS, Pages, upperCaseFirst, WMSY_COVER_BANNER } from "../../utils";
 
 const LearnArticle = ({article, category}) => {
 
-  const router = useRouter();
-
-  // BreadCrumbs 
-  const categoryUrl = stripCharactersAndDash(replaceSpaceWithDash(category.title.toLowerCase()))
-  const articleUrl = article.id
-  console.log('article :>> ', article, categoryUrl, articleUrl);
+  
 
   // {category.title} linkToLearnPage(`/${categoryUrl}`)
   // {article.title} linkToLearnPage(`/${categoryUrl}/${articleUrl}`)
@@ -46,29 +40,39 @@ const LearnArticle = ({article, category}) => {
   return (
     <CategoryLearn>
       {/* breadcrumbs */}
-      <div className="row">
-        <div 
-          onClick={()=>linkToLearnPage(router )}
-        >
-          {upperCaseFirst(router.asPath.split('/').filter(item => item !== '')[0])} &gt;
-        </div>
-        <div 
-          onClick={()=>linkToLearnPage(router, `/${categoryUrl}`)}
-        >
-          {category.title} &gt;
-        </div>
-        <div style={{ color: COLORS.PRIMARY_GRAY }}>{article.title}</div>
-      </div>
-
-      <h1>
-        {article.title}
-      </h1>
-
-      <ReactMarkdown
-        children={article.markdown} 
-        rehypePlugins={[rehypeRaw]}
-        skipHtml={false}
+      <BreadCrumbs 
+        article={article} 
+        category={category}
       />
+
+      {/* Banner image */}
+      <LearnCoverBanner backgroundImage={category.categoryImg ? category.categoryImg  : WMSY_COVER_BANNER} />
+
+      <Typography 
+        variant={TVariant.L}
+        weight={TWeight.BOLD}
+      >
+        {article.title}
+      </Typography>
+
+      <Typography>
+        <div style={{ lineHeight: '2.5rem'}}>
+          <ReactMarkdown
+            children={article.markdown} 
+            rehypePlugins={[rehypeRaw]}
+            skipHtml={false}
+          />
+        </div>
+        
+      </Typography>
+
+      <Typography
+        variant={TVariant.M}
+        weight={TWeight.XREGULAR}
+      >
+        <ScrollToTop scrollToTopText={'Back to top of article'} />  
+      </Typography>     
+      
     </CategoryLearn>
   );
 };

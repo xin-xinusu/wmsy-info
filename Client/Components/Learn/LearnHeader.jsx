@@ -57,8 +57,7 @@ export const LearnHeader = ({ BgImage, title }) => {
   return (
     <LearnHeaderHolder
       style={{
-        position: relative,
-        overflow: 'hidden'
+        position: relative
       }}
     >
       <Image 
