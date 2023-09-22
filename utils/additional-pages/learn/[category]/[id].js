@@ -1,14 +1,14 @@
 import React, { useEffect, useContext, useState } from 'react'
 import { useRouter } from 'next/router';
 
-import { HeaderVariant } from "../../../Client/Components/Layout";
-import { TitlePages } from "../../../Client/utils";
+import { HeaderVariant } from "../../../../Client/Components/Layout";
+import { TitlePages } from "../../../../Client/utils";
 
-import { Layout } from "../../../Client/Components/Layout/Layout";
-import LearnContext from '../../../Client/contexts/learn.context'
+import { Layout } from "../../../../Client/Components/Layout/Layout";
+import LearnContext from '../../../../Client/contexts/learn.context'
 
-import LearnArticle from "../../../Client/Components/Learn/LearnArticle";
-import { Loading } from '../../../Client/Components/Loading/Loading'
+import LearnArticle from "../../../../Client/Components/Learn/LearnArticle";
+import { Loading } from '../../../../Client/Components/Loading/Loading'
 
 const ArticlePage = () => {
   const router = useRouter();

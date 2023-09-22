@@ -43,8 +43,9 @@ export const Header = ({ variant }) => {
           </Typography>
         </LogoContainer>
 
-        <Navbar variant={variant} />
       </HeaderContainer>
     </>
   );
 };
+
+{/* <Navbar variant={variant} /> */}

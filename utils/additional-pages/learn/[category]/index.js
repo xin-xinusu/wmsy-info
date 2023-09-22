@@ -1,13 +1,13 @@
 import React, { useEffect, useContext, useState } from 'react'
 import { useRouter } from 'next/router';
 
-import { HeaderVariant } from "../../../Client/Components/Layout";
-import { TitlePages } from "../../../Client/utils";
-import { Layout } from "../../../Client/Components/Layout/Layout";
-import LearnContext from '../../../Client/contexts/learn.context'
-import { LearnCategory } from "../../../Client/Components/Learn/LearnCategory";
+import { HeaderVariant } from "../../../../Client/Components/Layout";
+import { TitlePages } from "../../../../Client/utils";
+import { Layout } from "../../../../Client/Components/Layout/Layout";
+import LearnContext from '../../../../Client/contexts/learn.context'
+import { LearnCategory } from "../../../../Client/Components/Learn/LearnCategory";
 
-import { Loading } from '../../../Client/Components/Loading/Loading'
+import { Loading } from '../../../../Client/Components/Loading/Loading'
 
 
 const index = () => {
