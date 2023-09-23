@@ -29,7 +29,11 @@ export const MenuNavbar = () => {
         </Typography>
       </MenuNavbarItem>
       <HorizontalLine />
-      <MenuNavbarItem onClick={()=>linkToPage(router, Pages.ABOUT_US)}>
+    </MenuNavbarContainer>
+  );
+};
+
+{/* <MenuNavbarItem onClick={()=>linkToPage(router, Pages.ABOUT_US)}>
         <About fill={COLORS.MID_PURPLE} />
         <Typography {...typographyProps}>About</Typography>
       </MenuNavbarItem>
@@ -40,7 +44,4 @@ export const MenuNavbar = () => {
           Learn
         </Typography>
       </MenuNavbarItem>
-      <HorizontalLine />
-    </MenuNavbarContainer>
-  );
-};
+      <HorizontalLine /> */}
